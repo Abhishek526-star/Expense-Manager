@@ -1,8 +1,12 @@
 import User from "../models/userModel.js";
 import JWT from "jsonwebtoken";
+import dotenv from "dotenv";
 
 
-const JWT_SECRET = 'jwrsecret';
+
+dotenv.config();
+
+const JWT_SECRET = process.env.JWT_SECRET;
 const TOKEN_EXPIRE_TIME = '24h';
 
 export default async function authMiddleware(req, res, next){

@@ -2,8 +2,11 @@ import User from "../models/userModel.js";
 import validator from "validator";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 
-const JWT_SECRET = "jwrsecret";
+dotenv.config();
+
+const JWT_SECRET = process.env.JWT_SECRET;
 const TOKEN_EXPIRE_TIME = "24h";
 
 function createToken(userId) {
