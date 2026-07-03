@@ -13,7 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 
-const API_URL = "http://localhost:4000"
+const API_URL = "https://expense-manager-backend-lhq1.onrender.com"
 
 
 // to get transactions from local storage

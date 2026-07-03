@@ -11,7 +11,7 @@ import {
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
 
-const API_URL = "http://localhost:4000/api/contact";
+const API_URL = "https://expense-manager-backend-lhq1.onrender.com/api/contact";
 
 const ContactUs = () => {
     const [loading, setLoading] = useState(false);

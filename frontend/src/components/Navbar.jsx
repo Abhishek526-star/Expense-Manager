@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 import axios from "axios";
 
 
-const BASE_URL = "http://localhost:4000/api"; // Update with your backend URL
+const BASE_URL = "https://expense-manager-backend-lhq1.onrender.com/api"; // Update with your backend URL
 
 const Navbar = ({user:propUser, onLogout }) => {
   const navigate = useNavigate();

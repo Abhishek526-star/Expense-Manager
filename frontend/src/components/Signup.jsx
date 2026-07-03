@@ -5,7 +5,7 @@ import { User, Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { Link, useNavigate } from "react-router";
 import axios from "axios";
 
-const Signup = ({ API_URL = "http://localhost:4000" }) => {
+const Signup = ({ API_URL = "https://expense-manager-backend-lhq1.onrender.com" }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

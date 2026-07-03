@@ -3,7 +3,7 @@ import { loginStyles } from '../assets/dummyStyles'
 import { Eye, EyeOff, Mail, User } from 'lucide-react'
 import { Link,useNavigate } from 'react-router'
 import axios from "axios";
-const Login = ({ onLogin, API_URL = "http://localhost:4000" }) => {
+const Login = ({ onLogin, API_URL = "https://expense-manager-backend-lhq1.onrender.com" }) => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

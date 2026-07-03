@@ -6,7 +6,7 @@ import { ActivityIcon, ArrowDown, ArrowUp, Car, ChevronDown, ChevronUp, Clock, C
 import { Outlet } from 'react-router';
 import axios from 'axios';
 
-const API_BASE = "http://localhost:4000/api";
+const API_BASE = "https://expense-manager-backend-lhq1.onrender.com/api";
 const CATEGORY_ICONS = {
   Food: <Utensils className="w-4 h-4" />,
   Housing: <Home className="w-4 h-4" />,
