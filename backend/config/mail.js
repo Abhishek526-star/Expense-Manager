@@ -3,18 +3,22 @@ import nodemailer from "nodemailer";
 // Create transporter
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
-  port: 587,
-  secure: false, // true for 465, false for 587
+  port: 465,
+  secure: true, // true for 465, false for 587
 
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
 
-  tls: {
-    rejectUnauthorized: false,
-  },
+
 });
+
+console.log("EMAIL_USER:", process.env.EMAIL_USER);
+console.log(
+  "EMAIL_PASS exists:",
+  process.env.EMAIL_PASS ? "YES" : "NO"
+);
 
 // Verify SMTP connection
 transporter.verify((error, success) => {
