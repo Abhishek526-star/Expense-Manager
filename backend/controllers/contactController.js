@@ -14,36 +14,37 @@ export const sendContactMail = async (req, res) => {
     console.log("=== Contact Request ===");
     console.log(req.body);
 
-    console.log("EMAIL_USER:", process.env.EMAIL_USER);
-    console.log("EMAIL_PASS exists:", !!process.env.EMAIL_PASS);
+    console.log("BREVO_LOGIN:", process.env.BREVO_LOGIN);
+    console.log("BREVO_SMTP_KEY exists:", !!process.env.BREVO_SMTP_KEY);
 
     console.log("Starting sendMail...");
 
-    const info = await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
-      subject: `Finance Tracker Feedback: ${subject}`,
-      html: `
-        <h2>New Feedback</h2>
+  const info = await transporter.sendMail({
+  from: '"Finance Tracker" <tesla.339187@gmail.com>', // Your verified sender
+  to: process.env.RECEIVER_EMAIL,                     // Your inbox
+  replyTo: email,                                    // User's email
+  subject: `Finance Tracker Feedback: ${subject}`,
+  html: `
+    <h2>New Feedback</h2>
 
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Subject:</b> ${subject}</p>
-        <p><b>Message:</b></p>
-        <p>${message}</p>
-      `,
-    });
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Subject:</strong> ${subject}</p>
+    <p><strong>Message:</strong></p>
+    <p>${message}</p>
+  `,
+});
 
     console.log("Mail sent:", info);
 
-    res.status(200).json({
+    return res.status(200).json({
       success: true,
-      message: "Feedback Sent Successfully",
+      message: "Feedback sent successfully",
     });
   } catch (err) {
     console.error("sendMail Error:", err);
 
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       message: err.message,
     });

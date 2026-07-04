@@ -55,7 +55,7 @@ const AddTransactionModal = ({
                                 }}
                                 className={modalStyles.input(colorClass.ring)}
                                 placeholder={
-                                    type === "both"
+                                    type === "income"
                                         ? "Salary , Funds , etc. "
                                         : "Groceries , Rent , etc."
                                 } required

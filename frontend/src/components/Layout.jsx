@@ -108,11 +108,11 @@ const Layout = ({ onLogout, user }) => {
         type: "expense",
       }));
 
-      console.log("Income API:", incomeRes.data);
-      console.log("Expense API:", expenseRes.data);
+      // console.log("Income API:", incomeRes.data);
+      // console.log("Expense API:", expenseRes.data);
 
-      console.log("Mapped Income:", incomes);
-      console.log("Mapped Expense:", expenses);
+      // console.log("Mapped Income:", incomes);
+      // console.log("Mapped Expense:", expenses);
 
       const allTransactions = [...incomes, ...expenses]
         .map((t) => ({
@@ -127,7 +127,7 @@ const Layout = ({ onLogout, user }) => {
         .sort((a, b) => new Date(b.date) - new Date(a.date));
 
       setTransactions(allTransactions);
-      console.log("Fetched transactions:", allTransactions);
+      // console.log("Fetched transactions:", allTransactions);
       setLastUpdated(new Date());
     } catch (err) {
       console.error(
