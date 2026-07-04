@@ -1,15 +1,15 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import dotenv from 'dotenv/config';
 import { connectDB } from './config/db.js';
 import userRouter from './routes/userRoute.js';
 import incomeRouter from './routes/incomeRoute.js';
 import expenseRouter from './routes/expenseRoute.js';
 import dashboardRouter from './routes/dashboardRoute.js';
 import contactRoutes from "./routes/contactRoutes.js";
+import dotenv from "dotenv";
 
-
+dotenv.config();
 const app = express();
 const port = 4000;
 
