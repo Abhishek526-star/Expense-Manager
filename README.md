@@ -2,6 +2,21 @@
 
 A modern, full-stack Expense Management System built with the MERN Stack that helps users efficiently track income, expenses, and financial insights. The application provides secure authentication, real-time financial analytics, transaction history, Excel export, and a responsive user interface.
 
+## 🌐 Live Demo
+
+🚀 **Try the live application here:**
+
+**Live Website:** https://expense-manager-frontend-9wjd.onrender.com/
+
+> **Note:** The application is hosted on Render's free tier. If the application has been idle, the first request may take 30–60 seconds while the backend wakes up.
+
+---
+
+## 🔗 Links
+
+- **🌍 Live Demo:** https://expense-manager-frontend-9wjd.onrender.com/
+- **💻 Source Code:** https://github.com/Abhishek526-star/Expense-Manager
+
 ![React](https://img.shields.io/badge/React-19-blue?logo=react)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-green?logo=node.js)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Database-brightgreen?logo=mongodb)
